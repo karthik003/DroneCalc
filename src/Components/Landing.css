@@ -1,0 +1,28 @@
+.landing{
+    background-image: url("../Assets/drone1.jpg");
+    /* Set a specific height */
+   height: 100vh; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.calculate{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@font-face {
+    font-family: "Orbitron";
+    src: url("../Fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+  }
+  
+  .text{
+    font-family: 'Orbitron';
+    font-display: swap;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  
