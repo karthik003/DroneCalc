@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/DroneCalc/static/css/main.dbcfb6c1.chunk.css",
+    "main.css": "/DroneCalc/static/css/main.0c992cb7.chunk.css",
     "main.js": "/DroneCalc/static/js/main.9a731e78.chunk.js",
     "main.js.map": "/DroneCalc/static/js/main.9a731e78.chunk.js.map",
     "runtime-main.js": "/DroneCalc/static/js/runtime-main.23c9c69e.js",
@@ -9,10 +9,10 @@
     "static/js/2.df9c3109.chunk.js": "/DroneCalc/static/js/2.df9c3109.chunk.js",
     "static/js/2.df9c3109.chunk.js.map": "/DroneCalc/static/js/2.df9c3109.chunk.js.map",
     "index.html": "/DroneCalc/index.html",
-    "precache-manifest.d2176425a02d3747a11017d64d50560b.js": "/DroneCalc/precache-manifest.d2176425a02d3747a11017d64d50560b.js",
+    "precache-manifest.aa1a9a446f052bffe28f68eedd98310a.js": "/DroneCalc/precache-manifest.aa1a9a446f052bffe28f68eedd98310a.js",
     "service-worker.js": "/DroneCalc/service-worker.js",
     "static/css/2.1488431a.chunk.css.map": "/DroneCalc/static/css/2.1488431a.chunk.css.map",
-    "static/css/main.dbcfb6c1.chunk.css.map": "/DroneCalc/static/css/main.dbcfb6c1.chunk.css.map",
+    "static/css/main.0c992cb7.chunk.css.map": "/DroneCalc/static/css/main.0c992cb7.chunk.css.map",
     "static/js/2.df9c3109.chunk.js.LICENSE.txt": "/DroneCalc/static/js/2.df9c3109.chunk.js.LICENSE.txt",
     "static/media/Landing.css": "/DroneCalc/static/media/drone1.c9876fee.jpg",
     "static/media/logo.svg": "/DroneCalc/static/media/logo.5d5d9eef.svg"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.23c9c69e.js",
     "static/css/2.1488431a.chunk.css",
     "static/js/2.df9c3109.chunk.js",
-    "static/css/main.dbcfb6c1.chunk.css",
+    "static/css/main.0c992cb7.chunk.css",
     "static/js/main.9a731e78.chunk.js"
   ]
 }
