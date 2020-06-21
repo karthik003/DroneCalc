@@ -21,6 +21,12 @@ class Input extends Component {
              rotors:'',
              speed:'',
              time:'',
+             motorrate:'',
+             batteryvolt:'',
+             propdiam:'',
+             proppitch:'',
+             forwardvel:'',
+             motorstallcur:'',
              submit:false,
              batteryable:false,
              weightable:false,
@@ -32,7 +38,13 @@ class Input extends Component {
              twratioable:false,
              rotorsable:false,
              speedable:false,
-             timeable:false,   
+             timeable:false,
+             motorrateable:false,
+             batteryvoltable:false,
+             propdiamable:false,
+             proppitchable:false,
+             forwardvelable:false,
+             motorstallcurable:false,
 
         }
     }
@@ -68,7 +80,13 @@ class Input extends Component {
             twratioable:true,
             rotorsable:true,
             speedable:true,
-            timeable:true,   
+            timeable:true,
+            motorrateable:true,
+            batteryvoltable:true,
+            propdiamable:true,
+            proppitchable:true,
+            forwardvelable:true,
+            motorstallcurable:true,   
         })
     }
     timeHandler =() =>{
@@ -83,7 +101,13 @@ class Input extends Component {
             twratioable:true,
             rotorsable:true,
             speedable:true,
-            timeable:true,   
+            timeable:true,
+            motorrateable:true,
+            batteryvoltable:true,
+            propdiamable:true,
+            proppitchable:true,
+            forwardvelable:true,
+            motorstallcurable:true,   
         })
     }
     speedHandler =()=>{
@@ -98,7 +122,13 @@ class Input extends Component {
             twratioable:false,
             rotorsable:false,
             speedable:true,
-            timeable:true,   
+            timeable:true,
+            motorrateable:true,
+            batteryvoltable:true,
+            propdiamable:true,
+            proppitchable:true,
+            forwardvelable:true,
+            motorstallcurable:true,   
         })
     }
     rangeHandler= () =>{
@@ -113,13 +143,82 @@ class Input extends Component {
             twratioable:true,
             rotorsable:true,
             speedable:false,
-            timeable:false,   
+            timeable:false,
+            motorrateable:true,
+            batteryvoltable:true,
+            propdiamable:true,
+            proppitchable:true,
+            forwardvelable:true,
+            motorstallcurable:true,   
+        })
+    }
+    thrustHandler =()=>{
+        this.setState({
+            batteryable:true,
+            weightable:true,
+            currentable:true,
+            maxcurrentable:true,
+            motorsable:true,
+            motordistanceable:true,
+            propradiusable:true,
+            twratioable:true,
+            rotorsable:true,
+            speedable:true,
+            timeable:true,
+            motorrateable:false,
+            batteryvoltable:false,
+            propdiamable:false,
+            proppitchable:false,
+            forwardvelable:false,
+            motorstallcurable:true,    
+        })
+    }
+    rpmHandler =()=>{
+        this.setState({
+            batteryable:true,
+            weightable:true,
+            currentable:true,
+            maxcurrentable:true,
+            motorsable:true,
+            motordistanceable:true,
+            propradiusable:true,
+            twratioable:true,
+            rotorsable:true,
+            speedable:true,
+            timeable:true,
+            motorrateable:false,
+            batteryvoltable:false,
+            propdiamable:true,
+            proppitchable:true,
+            forwardvelable:true,
+            motorstallcurable:true,  
+        })
+    }
+    cRateHandler =()=>{
+        this.setState({
+            batteryable:false,
+            weightable:true,
+            currentable:true,
+            maxcurrentable:true,
+            motorsable:true,
+            motordistanceable:true,
+            propradiusable:true,
+            twratioable:true,
+            rotorsable:true,
+            speedable:true,
+            timeable:true,
+            motorrateable:true,
+            batteryvoltable:true,
+            propdiamable:true,
+            proppitchable:true,
+            forwardvelable:true,
+            motorstallcurable:false,   
         })
     }
     render() {
-        const{battery,weight,current,maxcurrent,motors,motordistance,propradius,twratio,rotors,speed,time,submit,
-            batteryable,weightable,timeable,speedable,rotorsable,twratioable,propradiusable,motordistanceable,motorsable
-        ,maxcurrentable,currentable}=this.state
+        const{battery,weight,current,maxcurrent,motors,motordistance,propradius,twratio,rotors,speed,time,motorrate,batteryvolt,propdiam
+            ,proppitch,forwardvel,motorstallcur,submit,batteryable,weightable,timeable,speedable,rotorsable,twratioable,propradiusable,motordistanceable,motorsable
+        ,maxcurrentable,currentable,motorrateable,batteryvoltable,propdiamable,proppitchable,forwardvelable,motorstallcurable}=this.state
 
         return (
             <>
@@ -129,7 +228,11 @@ class Input extends Component {
                
                 <Button variant="primary" type="submit" onClick={this.timeHandler} style={{minWidth:"135px"}}>Minimum Flight Time</Button><br /><br />
                 <Button variant="primary" type="submit" onClick={this.speedHandler}  style={{minWidth:"135px"}}>Max Forward Flight Speed</Button><br /><br />
-                <Button variant="primary" type="submit" onClick={this.rangeHandler}  style={{minWidth:"135px"}}>Estimated Range</Button>
+                <Button variant="primary" type="submit" onClick={this.rangeHandler}  style={{minWidth:"135px"}}>Estimated Range</Button><br /><br />
+                <Button variant="primary" type="submit" onClick={this.thrustHandler}  style={{minWidth:"135px"}}>Static/Dynamic Thrust</Button><br /><br />
+                <Button variant="primary" type="submit" onClick={this.rpmHandler}  style={{minWidth:"135px"}}>RPM</Button><br /><br />
+                <Button variant="primary" type="submit" onClick={this.cRateHandler}  style={{minWidth:"135px"}}>C-Rating of the battery</Button>
+
          </ScrollIntoView> 
             </div>
             <div id="allinputs" className="jumbotron inpfield" style={{textAlign:"left",width:"80%",backgroundColor:"white"}}>
@@ -213,7 +316,49 @@ class Input extends Component {
                         </Form.Group>
                     </Col>
                 </Row>
-                    <div style={{margin:"auto",width:"100%",textAlign:'center'}}>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="formBasicmotorRate">
+                            <Form.Label>Motor rating</Form.Label>
+                            <Form.Control type="number" placeholder="Motor rating" name="motorrate" value={motorrate} onChange={this.changeHandler} disabled={motorrateable}/>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="formBasicbatteryvolt">
+                            <Form.Label>Battery Voltage</Form.Label>
+                            <Form.Control type="number" placeholder="Battery Voltage" name="batteryvolt" value={batteryvolt} onChange={this.changeHandler} disabled={batteryvoltable}/>
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="formBasicpropdiam">
+                            <Form.Label>Diameter of Propellor </Form.Label>
+                            <Form.Control type="number" placeholder="Diameter of Propellor" name="propdiam" value={propdiam} onChange={this.changeHandler} disabled={propdiamable}/>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="formBasicproppitch">
+                            <Form.Label> Pitch of Propellor</Form.Label>
+                            <Form.Control type="number" placeholder="Pitch of Propellor" name="proppitch" value={proppitch} onChange={this.changeHandler} disabled={proppitchable}/>
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="formBasicForwardvel">
+                            <Form.Label>Forward Velocity </Form.Label>
+                            <Form.Control type="number" placeholder="Forward Velocity" name="forwardvel" value={forwardvel} onChange={this.changeHandler} disabled={forwardvelable}/>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="formBasicmotorstallcur">
+                            <Form.Label> Motor Stall Current</Form.Label>
+                            <Form.Control type="number" placeholder="Flight Time" name="motorstallcur" value={motorstallcur} onChange={this.changeHandler} disabled={motorstallcurable}/>
+                        </Form.Group>
+                    </Col>
+                </Row>
+                    <div style={{margin:"auto",width:"100%",textAlign:'left'}}>
                         <Button variant="success" type="submit" onClick={this.clickSubmit} style={{width:"150px"}} >
                             Submit
                         </Button>
@@ -233,5 +378,6 @@ class Input extends Component {
         )
     }
 }
+
 
 export default Input
