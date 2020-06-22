@@ -1,7 +1,7 @@
 .landing{
-    background-image: url("../Assets/drone1.jpg");
+    background-image: url("../Assets/drone5.jpg");
     /* Set a specific height */
-   height: 100vh; 
+    height: 100vh; 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;

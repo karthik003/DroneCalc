@@ -45,6 +45,7 @@ class Input extends Component {
              proppitchable:false,
              forwardvelable:false,
              motorstallcurable:false,
+             display:' '
 
         }
     }
@@ -56,7 +57,52 @@ class Input extends Component {
     submitHandler=e=>{
         e.preventDefault()
         console.log(this.state)
-       
+
+        if(this.state.battery!== '' && this.state.weight!=='' && this.state.current!==''){
+            this.setState({
+                display:(this.state.battery * 0.8 * 60)/(1000*this.state.weight*this.state.current) +" min"
+            })
+        }
+        else if(this.state.battery!== '' && this.state.maxcurrent!=='' && this.state.motors!==''){
+            this.setState({
+                display:(this.state.battery * 0.8 * 60)/(1000*this.state.maxcurrent*this.state.motors) +" min"
+            })
+        }
+        else if(this.state.weight!== '' && this.state.motordistance!=='' && this.state.propradius!==''&& this.state.twratio!==''&& this.state.rotors!==''){
+            this.setState({
+                display:((1-1/(this.state.twratio)**2)*(3.55* this.state.twratio)*((this.state.weight/(0.5*(this.state.motordistance**2) + (this.state.rotors -1)*(3.14*(this.state.propradius**2) )) )**0.5)) +" m/s"
+            })
+        }
+        else if (this.state.speed!== '' && this.state.time!==''){
+            this.setState({
+                display:this.state.speed*this.state.time*60 +" m"
+            })
+        }
+        else if( this.state.propdiam!== '' && this.state.proppitch!=='' && this.state.forwardvel!==''&& this.state.motorrate!==''&& this.state.batteryvolt!==''){
+            this.setState({
+                display: (4.392399* this.state.motorrate*this.state.batteryvolt)*(this.state.propdiam**3.5/this.state.proppitch**0.5)*((0.00042333*this.state.motorrate*this.state.batteryvolt*this.state.proppitch)- this.state.forwardvel)+ " "
+            })
+        }
+        else if (this.state.motorrate!== '' && this.state.batteryvolt!==''){
+            this.setState({
+                display:this.state.motorrate*this.state.batteryvolt +" "
+            })
+        }
+        else if (this.state.motorstallcur!== '' && this.state.battery!==''){
+            this.setState({
+                display:this.state.motorstallcur/this.state.battery +" "
+            })
+        }
+        else{
+            this.setState({
+                display:<><p style={{color:"red",fontFamily:"courier",fontSize:"26px",textAlign:"center"}}>Error</p>
+                        <ul>
+                            <li style={{color:"grey",fontFamily:"courier",fontSize:"20px"}}><i>You probably didn't enter all the values.</i></li>
+                            <li style={{color:"grey" ,fontFamily:"courier",fontSize:"20px"}}><i>You didn't click on which of the given outputs you want.</i></li>
+                        </ul></>
+            })
+        }
+        
     }
     clickSubmit =() =>{
         this.setState({
@@ -218,7 +264,7 @@ class Input extends Component {
     render() {
         const{battery,weight,current,maxcurrent,motors,motordistance,propradius,twratio,rotors,speed,time,motorrate,batteryvolt,propdiam
             ,proppitch,forwardvel,motorstallcur,submit,batteryable,weightable,timeable,speedable,rotorsable,twratioable,propradiusable,motordistanceable,motorsable
-        ,maxcurrentable,currentable,motorrateable,batteryvoltable,propdiamable,proppitchable,forwardvelable,motorstallcurable}=this.state
+        ,maxcurrentable,currentable,motorrateable,batteryvoltable,propdiamable,proppitchable,forwardvelable,motorstallcurable,display}=this.state
 
         return (
             <>
@@ -354,7 +400,7 @@ class Input extends Component {
                     <Col>
                         <Form.Group controlId="formBasicmotorstallcur">
                             <Form.Label> Motor Stall Current</Form.Label>
-                            <Form.Control type="number" placeholder="Flight Time" name="motorstallcur" value={motorstallcur} onChange={this.changeHandler} disabled={motorstallcurable}/>
+                            <Form.Control type="number" placeholder="Motor Stall Current" name="motorstallcur" value={motorstallcur} onChange={this.changeHandler} disabled={motorstallcurable}/>
                         </Form.Group>
                     </Col>
                 </Row>
@@ -368,9 +414,9 @@ class Input extends Component {
                                 animationOut: 'customLeaveAnimation',
                                 }} animationDuration={1000}  open={submit} onClose={this.closeSubmit} blockScroll={false} center >
                             <br />
-                            <h2 className="text">Output ={5+98}</h2>
+                            <h2 className="text">Output ={display}</h2>
                             
-                            </Modal>
+                    </Modal>
                 </Form>
             </div>
             
