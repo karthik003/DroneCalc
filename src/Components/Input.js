@@ -62,7 +62,7 @@ class Input extends Component {
 
         if(this.state.battery!== '' && this.state.weight!=='' && this.state.current!==''){
             this.setState({
-                display:<>{"Output = "+(this.state.battery * 0.8 * 60)/(1000*this.state.weight*this.state.current) +" min"}<br />
+                display:<>{"Output = "+((this.state.battery * 0.8 * 60)/(1000*this.state.weight*this.state.current)).toFixed(2) +" min"}<br />
                 <p style={{color:"green",fontFamily:"courier",fontSize:"26px",textAlign:"left",marginLeft:"17px"}}>Remarks</p>
                 <ul>
                     <li style={{color:"grey",fontFamily:"courier",fontSize:"20px",textAlign:"left"}}><i>Expected Flight Time based on all-up weight when hovering only.</i></li>
@@ -72,7 +72,7 @@ class Input extends Component {
         }
         else if(this.state.battery!== '' && this.state.maxcurrent!=='' && this.state.motors!==''){
             this.setState({
-                display:<>{"Output = "+(this.state.battery * 0.8 * 60)/(1000*this.state.maxcurrent*this.state.motors) +" min"}<br />
+                display:<>{"Output = "+((this.state.battery * 0.8 * 60)/(1000*this.state.maxcurrent*this.state.motors)).toFixed(2) +" min"}<br />
               <p style={{color:"green",fontFamily:"courier",fontSize:"26px",textAlign:"left",marginLeft:"17px"}}>Remarks</p>
                 <ul>
                     <li style={{color:"grey",fontFamily:"courier",fontSize:"20px",textAlign:"left"}}><i>Expected Min. Flight Time is based on maximum throttle and is independent of weight.</i></li>
@@ -83,7 +83,7 @@ class Input extends Component {
         }
         else if(this.state.weight!== '' && this.state.motordistance!=='' && this.state.propradius!==''&& this.state.twratio!==''&& this.state.rotors!==''){
             this.setState({
-                display:<>{"Output = "+((1-1/(this.state.twratio)**2)*(3.55* this.state.twratio)*((this.state.weight/(0.5*(this.state.motordistance**2) + (this.state.rotors -1)*(3.14*(this.state.propradius**2) )) )**0.5)) +" m/s"}
+                display:<>{"Output = "+((1-1/(this.state.twratio)**2)*(3.55* this.state.twratio)*((this.state.weight/(0.5*(this.state.motordistance**2) + (this.state.rotors -1)*(3.14*(this.state.propradius**2) )) )**0.5)).toFixed(2) +" m/s"}
                     <p style={{color:"green",fontFamily:"courier",fontSize:"26px",textAlign:"left",marginLeft:"17px"}}>Remarks</p>
                 <ul>
                     <li style={{color:"grey",fontFamily:"courier",fontSize:"20px",textAlign:"left"}}><i>Theoretically Max. attainable forward speed in flight at max throttle(neglecting copter aerodynamic drag and down force due to tilt,may vary with altitude).</i></li>
@@ -98,7 +98,7 @@ class Input extends Component {
         }
         else if (this.state.speed!== '' && this.state.time!==''){
             this.setState({
-                display:<>{"Output = "+this.state.speed*this.state.time*60 +" m"}
+                display:<>{"Output = "+(this.state.speed*this.state.time*60).toFixed(2) +" m"}
                      <p style={{color:"green",fontFamily:"courier",fontSize:"26px",textAlign:"left",marginLeft:"17px"}}>Remarks</p>
                 <ul>
                     <li style={{color:"grey",fontFamily:"courier",fontSize:"20px",textAlign:"left"}}><i>Represents the max Range considering standard drag.</i></li>
@@ -109,17 +109,17 @@ class Input extends Component {
         }
         else if( this.state.propdiam!== '' && this.state.proppitch!=='' && this.state.forwardvel!==''&& this.state.motorrate!==''&& this.state.batteryvolt!==''){
             this.setState({
-                display:"Output = "+ (4.392399* this.state.motorrate*this.state.batteryvolt)*(this.state.propdiam**3.5/this.state.proppitch**0.5)*((0.00042333*this.state.motorrate*this.state.batteryvolt*this.state.proppitch)- this.state.forwardvel)+ " "
+                display:"Output = "+ ((4.392399* this.state.motorrate*this.state.batteryvolt)*(this.state.propdiam**3.5/this.state.proppitch**0.5)*((0.00042333*this.state.motorrate*this.state.batteryvolt*this.state.proppitch)- this.state.forwardvel)).toFixed(2)+ " "
             })
         }
         else if (this.state.motorrate!== '' && this.state.batteryvolt!==''){
             this.setState({
-                display:"Output = "+this.state.motorrate*this.state.batteryvolt +" "
+                display:"Output = "+(this.state.motorrate*this.state.batteryvolt).toFixed(2) +" "
             })
         }
         else if (this.state.motorstallcur!== '' && this.state.battery!==''){
             this.setState({
-                display:"Output = "+this.state.motorstallcur/this.state.battery +" "
+                display:"Output = "+(this.state.motorstallcur/this.state.battery).toFixed(2) +" "
             })
         }
         else{
