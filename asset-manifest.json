@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DroneCalc/static/css/main.fe8ce0c6.chunk.css",
-    "main.js": "/DroneCalc/static/js/main.29d23a96.chunk.js",
-    "main.js.map": "/DroneCalc/static/js/main.29d23a96.chunk.js.map",
+    "main.js": "/DroneCalc/static/js/main.a4e2ab87.chunk.js",
+    "main.js.map": "/DroneCalc/static/js/main.a4e2ab87.chunk.js.map",
     "runtime-main.js": "/DroneCalc/static/js/runtime-main.23c9c69e.js",
     "runtime-main.js.map": "/DroneCalc/static/js/runtime-main.23c9c69e.js.map",
     "static/css/2.1488431a.chunk.css": "/DroneCalc/static/css/2.1488431a.chunk.css",
     "static/js/2.8cde9d71.chunk.js": "/DroneCalc/static/js/2.8cde9d71.chunk.js",
     "static/js/2.8cde9d71.chunk.js.map": "/DroneCalc/static/js/2.8cde9d71.chunk.js.map",
     "index.html": "/DroneCalc/index.html",
-    "precache-manifest.d3e506663dc4f4c9873ac51316c62f6e.js": "/DroneCalc/precache-manifest.d3e506663dc4f4c9873ac51316c62f6e.js",
+    "precache-manifest.0382f8cdecdeadc9a9f1be8eda9bbf13.js": "/DroneCalc/precache-manifest.0382f8cdecdeadc9a9f1be8eda9bbf13.js",
     "service-worker.js": "/DroneCalc/service-worker.js",
     "static/css/2.1488431a.chunk.css.map": "/DroneCalc/static/css/2.1488431a.chunk.css.map",
     "static/css/main.fe8ce0c6.chunk.css.map": "/DroneCalc/static/css/main.fe8ce0c6.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.1488431a.chunk.css",
     "static/js/2.8cde9d71.chunk.js",
     "static/css/main.fe8ce0c6.chunk.css",
-    "static/js/main.29d23a96.chunk.js"
+    "static/js/main.a4e2ab87.chunk.js"
   ]
 }
