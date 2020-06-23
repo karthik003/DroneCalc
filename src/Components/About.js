@@ -26,7 +26,7 @@ class About extends Component {
 
                             </tr>
                             <tr>
-                            <td>Shwetanshu Singh</td>
+                            <td>Shwetanshu </td>
                             <td>VIT, Vellore</td>
                             <td><a href="mailto:shwetanshu0511@gmail.com">shwetanshu0511@gmail.com</a></td>
 

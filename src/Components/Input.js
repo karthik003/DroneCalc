@@ -83,7 +83,7 @@ class Input extends Component {
         }
         else if(this.state.weight!== '' && this.state.motordistance!=='' && this.state.propradius!==''&& this.state.twratio!==''&& this.state.rotors!==''){
             this.setState({
-                display:<>{"Output = "+((1-1/(this.state.twratio)**2)*(3.55* this.state.twratio)*((this.state.weight/(0.5*(this.state.motordistance**2) + (this.state.rotors -1)*(3.14*(this.state.propradius**2) )) )**0.5)).toFixed(2) +" m/s"}
+                display:<>{"Output = "+(((1-1/(this.state.twratio)**2)**0.25)*(3.55* this.state.twratio)*((this.state.weight/(0.5*(this.state.motordistance**2) + (this.state.rotors -1)*(3.14*(this.state.propradius**2) )) )**0.5)).toFixed(2) +" m/s"}
                     <p style={{color:"green",fontFamily:"courier",fontSize:"26px",textAlign:"left",marginLeft:"17px"}}>Remarks</p>
                 <ul>
                     <li style={{color:"grey",fontFamily:"courier",fontSize:"20px",textAlign:"left"}}><i>Theoretically Max. attainable forward speed in flight at max throttle(neglecting copter aerodynamic drag and down force due to tilt,may vary with altitude).</i></li>
@@ -109,7 +109,13 @@ class Input extends Component {
         }
         else if( this.state.propdiam!== '' && this.state.proppitch!=='' && this.state.forwardvel!==''&& this.state.motorrate!==''&& this.state.batteryvolt!==''){
             this.setState({
-                display:"Output = "+ ((4.392399* this.state.motorrate*this.state.batteryvolt)*(this.state.propdiam**3.5/this.state.proppitch**0.5)*((0.00042333*this.state.motorrate*this.state.batteryvolt*this.state.proppitch)- this.state.forwardvel)).toFixed(2)+ " "
+                display:<>{"Output = "+ ((0.00000004392399* this.state.motorrate*this.state.batteryvolt)*(this.state.propdiam**3.5/this.state.proppitch**0.5)*((0.00042333*this.state.motorrate*this.state.batteryvolt*this.state.proppitch)- this.state.forwardvel)).toFixed(2)+ " "}
+                     <p style={{color:"green",fontFamily:"courier",fontSize:"26px",textAlign:"left",marginLeft:"17px"}}>Remarks</p>
+                <ul>
+                    <li style={{color:"grey",fontFamily:"courier",fontSize:"20px",textAlign:"left"}}><i>The calculated thrust is for a single motor.You need to multiply it with the no. of motrs to get thrust for the entire drone.</i></li>
+                    <li style={{color:"grey" ,fontFamily:"courier",fontSize:"20px",textAlign:"left"}}><i>Enter Forward velocity = 0, if you want to calculate static thrust.</i></li>
+                </ul>
+                </>
             })
         }
         else if (this.state.motorrate!== '' && this.state.batteryvolt!==''){
@@ -119,7 +125,7 @@ class Input extends Component {
         }
         else if (this.state.motorstallcur!== '' && this.state.battery!==''){
             this.setState({
-                display:"Output = "+(this.state.motorstallcur/this.state.battery).toFixed(2) +" "
+                display:"Output = "+(this.state.motorstallcur*1000*this.state.motors/this.state.battery).toFixed(2) +" "
             })
         }
         else{
@@ -145,6 +151,20 @@ class Input extends Component {
     }
     hoverHandler= () =>{
         this.setState({
+            maxcurrent:'',
+            motors:'',
+            motordistance:'',
+            propradius:'',
+            twratio:'',
+            rotors:'',
+            speed:'',
+            time:'',
+            motorrate:'',
+            batteryvolt:'',
+            propdiam:'',
+            proppitch:'',
+            forwardvel:'',
+            motorstall:'',
             batteryable:false,
             weightable:false,
             currentable:false,
@@ -166,6 +186,20 @@ class Input extends Component {
     }
     timeHandler =() =>{
         this.setState({
+            weight:'',
+            current:'',
+            motordistance:'',
+            propradius:'',
+            twratio:'',
+            rotors:'',
+            speed:'',
+            time:'',
+            motorrate:'',
+            batteryvolt:'',
+            propdiam:'',
+            proppitch:'',
+            forwardvel:'',
+            motorstall:'',
             batteryable:false,
             weightable:true,
             currentable:true,
@@ -187,6 +221,16 @@ class Input extends Component {
     }
     speedHandler =()=>{
         this.setState({
+            battery:'',
+            current:'',
+            maxcurrent:'',
+            motors:'',
+            motorrate:'',
+            batteryvolt:'',
+            propdiam:'',
+            proppitch:'',
+            forwardvel:'',
+            motorstall:'',
             batteryable:true,
             weightable:false,
             currentable:true,
@@ -208,6 +252,21 @@ class Input extends Component {
     }
     rangeHandler= () =>{
         this.setState({
+            battery:'',
+            weight:'',
+            current:'',
+            maxcurrent:'',
+            motors:'',
+            motordistance:'',
+            propradius:'',
+            twratio:'',
+            rotors:'',
+            motorrate:'',
+            batteryvolt:'',
+            propdiam:'',
+            proppitch:'',
+            forwardvel:'',
+            motorstall:'',
             batteryable:true,
             weightable:true,
             currentable:true,
@@ -229,6 +288,18 @@ class Input extends Component {
     }
     thrustHandler =()=>{
         this.setState({
+            battery:'',
+            weight:'',
+            current:'',
+            maxcurrent:'',
+            motors:'',
+            motordistance:'',
+            propradius:'',
+            twratio:'',
+            rotors:'',
+            speed:'',
+            time:'',
+            motorstall:'',
             batteryable:true,
             weightable:true,
             currentable:true,
@@ -250,6 +321,21 @@ class Input extends Component {
     }
     rpmHandler =()=>{
         this.setState({
+            battery:'',
+            weight:'',
+            current:'',
+            maxcurrent:'',
+            motors:'',
+            motordistance:'',
+            propradius:'',
+            twratio:'',
+            rotors:'',
+            speed:'',
+            time:'',
+            propdiam:'',
+            proppitch:'',
+            forwardvel:'',
+            motorstall:'',
             batteryable:true,
             weightable:true,
             currentable:true,
@@ -271,11 +357,25 @@ class Input extends Component {
     }
     cRateHandler =()=>{
         this.setState({
+            weight:'',
+            current:'',
+            maxcurrent:'',
+            motordistance:'',
+            propradius:'',
+            twratio:'',
+            rotors:'',
+            speed:'',
+            time:'',
+            motorrate:'',
+            batteryvolt:'',
+            propdiam:'',
+            proppitch:'',
+            forwardvel:'',
             batteryable:false,
             weightable:true,
             currentable:true,
             maxcurrentable:true,
-            motorsable:true,
+            motorsable:false,
             motordistanceable:true,
             propradiusable:true,
             twratioable:true,
@@ -318,7 +418,7 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicbattery">
-                            <Form.Label>Battery Capacity (mAH) </Form.Label>
+                            <Form.Label>Battery Capacity (mAh) </Form.Label>
                             <Form.Control type="number" placeholder="Battery Capacity" name="battery" value={battery} onChange={this.changeHandler} disabled={batteryable}/>
                         </Form.Group>
                     </Col>
