@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/DroneCalc/precache-manifest.05d14462d9b839452d3c7db6d36f2e28.js"
+  "/DroneCalc/precache-manifest.449d3b5bfe1587dcd1ca38c7f3c74a80.js"
 );
 
 self.addEventListener('message', (event) => {

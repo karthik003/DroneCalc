@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/DroneCalc/static/css/main.1f10e03c.chunk.css",
-    "main.js": "/DroneCalc/static/js/main.2b2d9203.chunk.js",
-    "main.js.map": "/DroneCalc/static/js/main.2b2d9203.chunk.js.map",
+    "main.css": "/DroneCalc/static/css/main.fe8ce0c6.chunk.css",
+    "main.js": "/DroneCalc/static/js/main.e211f945.chunk.js",
+    "main.js.map": "/DroneCalc/static/js/main.e211f945.chunk.js.map",
     "runtime-main.js": "/DroneCalc/static/js/runtime-main.23c9c69e.js",
     "runtime-main.js.map": "/DroneCalc/static/js/runtime-main.23c9c69e.js.map",
     "static/css/2.1488431a.chunk.css": "/DroneCalc/static/css/2.1488431a.chunk.css",
-    "static/js/2.df9c3109.chunk.js": "/DroneCalc/static/js/2.df9c3109.chunk.js",
-    "static/js/2.df9c3109.chunk.js.map": "/DroneCalc/static/js/2.df9c3109.chunk.js.map",
+    "static/js/2.41bfcf5c.chunk.js": "/DroneCalc/static/js/2.41bfcf5c.chunk.js",
+    "static/js/2.41bfcf5c.chunk.js.map": "/DroneCalc/static/js/2.41bfcf5c.chunk.js.map",
     "index.html": "/DroneCalc/index.html",
-    "precache-manifest.05d14462d9b839452d3c7db6d36f2e28.js": "/DroneCalc/precache-manifest.05d14462d9b839452d3c7db6d36f2e28.js",
+    "precache-manifest.449d3b5bfe1587dcd1ca38c7f3c74a80.js": "/DroneCalc/precache-manifest.449d3b5bfe1587dcd1ca38c7f3c74a80.js",
     "service-worker.js": "/DroneCalc/service-worker.js",
     "static/css/2.1488431a.chunk.css.map": "/DroneCalc/static/css/2.1488431a.chunk.css.map",
-    "static/css/main.1f10e03c.chunk.css.map": "/DroneCalc/static/css/main.1f10e03c.chunk.css.map",
-    "static/js/2.df9c3109.chunk.js.LICENSE.txt": "/DroneCalc/static/js/2.df9c3109.chunk.js.LICENSE.txt",
-    "static/media/Landing.css": "/DroneCalc/static/media/drone5.c6f6725c.jpg",
+    "static/css/main.fe8ce0c6.chunk.css.map": "/DroneCalc/static/css/main.fe8ce0c6.chunk.css.map",
+    "static/js/2.41bfcf5c.chunk.js.LICENSE.txt": "/DroneCalc/static/js/2.41bfcf5c.chunk.js.LICENSE.txt",
+    "static/media/Drocula3.png": "/DroneCalc/static/media/Drocula3.57f41ac6.png",
+    "static/media/Landing.css": "/DroneCalc/static/media/drone5.80c8bf5c.jpg",
     "static/media/logo.svg": "/DroneCalc/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.23c9c69e.js",
     "static/css/2.1488431a.chunk.css",
-    "static/js/2.df9c3109.chunk.js",
-    "static/css/main.1f10e03c.chunk.css",
-    "static/js/main.2b2d9203.chunk.js"
+    "static/js/2.41bfcf5c.chunk.js",
+    "static/css/main.fe8ce0c6.chunk.css",
+    "static/js/main.e211f945.chunk.js"
   ]
 }
