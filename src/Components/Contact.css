@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Orbitron";
+    src: url("../Fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+  }
+  
+  .text{
+    font-family: 'Orbitron';
+    font-display: swap;
+    font-family: 'Orbitron';
+    font-weight: 500;
+    text-align: center;
+  }
+  
+
+
+
+@media only screen and (min-width:100px) and (max-width: 1140px) {
+    .astro{
+
+       display:none;
+
+  }
+  .form{
+      width:100%;
+  }
+  
+}
+/* examples/custom-animation.css */
+@keyframes customEnterAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes customLeaveAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+

@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Orbitron";
+    src: url("../Fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+}
+
+.text{
+    font-family: 'Orbitron';
+    font-display: swap;
+}
+
+.logo {
+    position: absolute;
+    left:7%;
+    margin-left: 5%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size:4vw;
+    font-display: swap; 
+  }
+
+.active1{
+    border-bottom: 1px solid white;
+}
+.active2{
+    border-bottom: 1px solid white;
+}.active3{
+    border-bottom: 1px solid white;
+}.active4{
+    border-bottom: 1px solid white;
+}.active5{
+    border-bottom: 1px solid white;
+}
+
+@media only screen and  (max-width: 995px) {
+.navbarcol{
+    background-color: #12162C;
+}
+}

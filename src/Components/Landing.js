@@ -18,6 +18,8 @@ class Landing extends Component {
                 <p className="text">CALCULATE</p>
             <Input />
             </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br />
             </>
         )
     }
