@@ -22,32 +22,32 @@ class About extends Component {
                             <tr >
                             <td>Abhishek Tyagi</td>
                             <td>VIT, Vellore</td>
-                            <td>abhityagi1224@gmail.com</td>
+                            <td><a href="mailto:abhityagi1224@gmail.com">abhityagi1224@gmail.com</a></td>
 
                             </tr>
                             <tr>
                             <td>Shwetanshu Singh</td>
                             <td>VIT, Vellore</td>
-                            <td>shwetanshu0511@gmail.com</td>
+                            <td><a href="mailto:shwetanshu0511@gmail.com">shwetanshu0511@gmail.com</a></td>
 
                             </tr>
                             <tr>
                             <td>Karthik Rajesh</td>
                             <td>VIT, Vellore</td>
-                            <td>karthik06082000@gmail.com</td>
+                            <td><a href="mailto:karthik06082000@gmail.com">karthik06082000@gmail.com</a></td>
 
                             </tr>
                             <td colspan="3" style={{fontFamily:"courier",fontSize:"20px",fontWeight:"600",textAlign:'left'}}>COMPUTER SCIENCE TEAM</td>
                             <tr>
                             <td>V.J. Karthik</td>
                             <td>VIT, Vellore</td>
-                            <td>vjk2018@gmail.com</td>
+                            <td><a href="mailto:vjk2018@gmail.com">vjk2018@gmail.com</a></td>
 
                             </tr>
                             <tr>
                             <td>Roopesh A</td>
                             <td>VIT, Vellore</td>
-                            <td>arvapalli12345@gmail.com</td>
+                            <td><a href="mailto:arvapalli12345@gmail.com">arvapalli12345@gmail.com</a></td>
 
                             </tr>
                         </tbody>
