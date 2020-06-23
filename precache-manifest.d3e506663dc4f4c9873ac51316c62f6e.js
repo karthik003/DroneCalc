@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "23541bab5b893bfe4200c7386bbf78c4",
+    "revision": "c3a3ab2b4f16e063bf83cb8e3aea4ec3",
     "url": "/DroneCalc/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DroneCalc/static/css/2.1488431a.chunk.css"
   },
   {
-    "revision": "f0dd04fda4ed9c94db9e",
+    "revision": "3a4f2451ddf53d48a8c0",
     "url": "/DroneCalc/static/css/main.fe8ce0c6.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DroneCalc/static/js/2.8cde9d71.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f0dd04fda4ed9c94db9e",
-    "url": "/DroneCalc/static/js/main.769f0c6d.chunk.js"
+    "revision": "3a4f2451ddf53d48a8c0",
+    "url": "/DroneCalc/static/js/main.29d23a96.chunk.js"
   },
   {
     "revision": "f7f1cecc739f108a3261",
