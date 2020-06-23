@@ -468,7 +468,7 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicThrust">
-                            <Form.Label>Thrust to Weight Ratio (N/Kg)</Form.Label>
+                            <Form.Label>Thrust to Weight Ratio </Form.Label>
                             <Form.Control type="number" placeholder="Thrust to Weight Ratio"name="twratio" value={twratio} onChange={this.changeHandler} disabled={twratioable}/>
                         </Form.Group>
                     </Col>
