@@ -460,8 +460,8 @@ class Input extends Component {
                     </Col>
                     <Col>
                         <Form.Group controlId="formBasicRadius">
-                            <Form.Label>Radius of Propellor (m)</Form.Label>
-                            <Form.Control type="number" placeholder="Radius of Propellor" name="propradius" value={propradius} onChange={this.changeHandler} disabled={propradiusable}/>
+                            <Form.Label>Radius of Propeller (m)</Form.Label>
+                            <Form.Control type="number" placeholder="Radius of Propeller" name="propradius" value={propradius} onChange={this.changeHandler} disabled={propradiusable}/>
                         </Form.Group>
                     </Col>
                 </Row>
@@ -510,14 +510,14 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicpropdiam">
-                            <Form.Label>Diameter of Propellor (inches) </Form.Label>
-                            <Form.Control type="number" placeholder="Diameter of Propellor" name="propdiam" value={propdiam} onChange={this.changeHandler} disabled={propdiamable}/>
+                            <Form.Label>Diameter of Propeller (inches) </Form.Label>
+                            <Form.Control type="number" placeholder="Diameter of Propeller" name="propdiam" value={propdiam} onChange={this.changeHandler} disabled={propdiamable}/>
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group controlId="formBasicproppitch">
-                            <Form.Label> Pitch of Propellor (inches)</Form.Label>
-                            <Form.Control type="number" placeholder="Pitch of Propellor" name="proppitch" value={proppitch} onChange={this.changeHandler} disabled={proppitchable}/>
+                            <Form.Label> Pitch of Propeller (inches)</Form.Label>
+                            <Form.Control type="number" placeholder="Pitch of Propeller" name="proppitch" value={proppitch} onChange={this.changeHandler} disabled={proppitchable}/>
                         </Form.Group>
                     </Col>
                 </Row>
