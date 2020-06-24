@@ -37,7 +37,7 @@ class Navgbar extends Component {
                 <Link activeClass="" to="landing" spy={true} smooth={true}duration={500}> <img  src={drocula} style={{width:"150px"}} alt="seds logo"/> </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{color:"red"}} />
-                <Navbar.Collapse className="col-md-pull-3" id="responsive-navbar-nav"style={{justifyContent:"center",position:"relative",right:"%"}}>
+                <Navbar.Collapse className="col-md-pull-3" id="responsive-navbar-nav"style={{justifyContent:"center",position:"relative",right:"5%"}}>
                 <Nav.Link className="mr-1 text "  style={{color:"#F4F4F4",fontSize:"18px",fontWeight:"700"}}><Link activeClass="" to="landing" spy={true} smooth={true}duration={500}> HOME</Link></Nav.Link>
                 <Nav.Link className="mr-1 text "  style={{color:"#F4F4F4",fontSize:"18px",fontWeight:"700"}}><Link activeClass="" to="about" spy={true} smooth={true}duration={500} offset={30}> ABOUT</Link></Nav.Link>
                 <Nav.Link className="mr-1 text "  style={{color:"#F4F4F4",fontSize:"18px",fontWeight:"700"}}><Link activeClass="" to="contact" spy={true} smooth={true}duration={500} offset={10}> CONTACT</Link></Nav.Link>
