@@ -42,3 +42,17 @@ width:150px
       transform: scale(0);
     }
   }
+
+  @media only screen and (min-width:470px) and (max-width: 590px) {
+  .inputtext{
+    font-size: 80%;
+  }
+  }
+
+  @media only screen and (max-width: 469px) {
+    .inputtext{
+      font-size: 60%;
+    }
+    
+    
+    }

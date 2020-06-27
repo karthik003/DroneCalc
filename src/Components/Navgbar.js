@@ -45,7 +45,7 @@ class Navgbar extends Component {
                     </Navbar.Collapse>
                 </Navbar>
                
-                <div id="landing" ><Landing /><br /><br /><br /><br /><br /><br /><br /></div>
+                <div id="landing" ><Landing /><br /><br /></div>
                 <div id="about" ><About /><br /><br /><br /><br /></div>
                 <div id="contact" ><br /><br /><br /><br /><br /><br /><Contact /></div>
                 <Footer />

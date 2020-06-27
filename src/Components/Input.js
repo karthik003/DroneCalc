@@ -399,7 +399,7 @@ class Input extends Component {
           )        
         return (
             <>
-            <div className="jumbotron inpbutton" style={{width:"21%",backgroundColor:"white",paddingTop:"200px"}}>
+            <div className="jumbotron inpbutton" style={{width:"21%",backgroundColor:"white",paddingTop:"50px"}}>
             <ScrollIntoView selector="#allinputs">
                 <Button variant="primary" type="submit" onClick={this.hoverHandler}  style={{minWidth:"135px",display:"inline-block"}}>Hover Flight Time (min)</Button><br /><br />
                
@@ -418,13 +418,13 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicbattery">
-                            <Form.Label>Battery Capacity (mAh) </Form.Label>
+                            <Form.Label className="inputtext">Battery Capacity (mAh) </Form.Label>
                             <Form.Control type="number" placeholder="Battery Capacity" name="battery" value={battery} onChange={this.changeHandler} disabled={batteryable}/>
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group controlId="formBasicWeigth">
-                            <Form.Label>All Up Weight (Kg)</Form.Label>
+                            <Form.Label className="inputtext">All Up Weight (Kg)</Form.Label>
                             <Form.Control type="number" placeholder="All Up Weight" name="weight" value={weight} onChange={this.changeHandler} disabled={weightable}/>
                         </Form.Group>
                     </Col>
@@ -432,13 +432,13 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicCurrent">
-                            <Form.Label>Current to lift 1kg (A)</Form.Label>
+                            <Form.Label className="inputtext">Current to lift 1kg (A)</Form.Label>
                             <Form.Control type="number" placeholder="Current to lift 1kg" name="current" value={current} onChange={this.changeHandler} disabled={currentable}/>
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group controlId="formBasicMaxCurrent">
-                            <Form.Label>Max Current drawn by 1 Motor (A)</Form.Label>
+                            <Form.Label className="inputtext">Max Current drawn by 1 Motor (A)</Form.Label>
                             <Form.Control type="number" placeholder="Max Current drawn by 1 Motor" name="maxcurrent" value={maxcurrent} onChange={this.changeHandler} disabled={maxcurrentable}/>
                         </Form.Group>
                     </Col>
@@ -446,7 +446,7 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicMotors">
-                            <Form.Label>No. of Motors</Form.Label>
+                            <Form.Label className="inputtext">No. of Motors</Form.Label>
                             <Form.Control type="number" placeholder="No. of Motors" name="motors" value={motors} onChange={this.changeHandler} disabled={motorsable}/>
                         </Form.Group>
                     </Col>
@@ -454,13 +454,13 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicMotorDist">
-                            <Form.Label>Motor to Motor Distance (m)</Form.Label>
+                            <Form.Label className="inputtext">Motor to Motor Distance (m)</Form.Label>
                             <Form.Control type="number" placeholder="Motor to Motor Distance" name="motordistance" value={motordistance} onChange={this.changeHandler} disabled={motordistanceable}/>
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group controlId="formBasicRadius">
-                            <Form.Label>Radius of Propeller (m)</Form.Label>
+                            <Form.Label className="inputtext">Radius of Propeller (m)</Form.Label>
                             <Form.Control type="number" placeholder="Radius of Propeller" name="propradius" value={propradius} onChange={this.changeHandler} disabled={propradiusable}/>
                         </Form.Group>
                     </Col>
@@ -468,13 +468,13 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicThrust">
-                            <Form.Label>Thrust to Weight Ratio </Form.Label>
+                            <Form.Label className="inputtext">Thrust to Weight Ratio </Form.Label>
                             <Form.Control type="number" placeholder="Thrust to Weight Ratio"name="twratio" value={twratio} onChange={this.changeHandler} disabled={twratioable}/>
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group controlId="formBasicRotors">
-                            <Form.Label>No. Of Rotors</Form.Label>
+                            <Form.Label className="inputtext">No. Of Rotors</Form.Label>
                             <Form.Control type="number" placeholder="No. Of Rotors" name="rotors" value={rotors} onChange={this.changeHandler} disabled={rotorsable}/>
                         </Form.Group>
                     </Col>
@@ -482,13 +482,13 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicFlight">
-                            <Form.Label>Max forward Flight Speed (m/s)</Form.Label>
+                            <Form.Label className="inputtext">Max forward Flight Speed (m/s)</Form.Label>
                             <Form.Control type="number" placeholder="Max forward Flight Speed" name="speed" value={speed} onChange={this.changeHandler} disabled={speedable}/>
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group controlId="formBasicTime">
-                            <Form.Label>Flight Time (s)</Form.Label>
+                            <Form.Label className="inputtext">Flight Time (s)</Form.Label>
                             <Form.Control type="number" placeholder="Flight Time" name="time" value={time} onChange={this.changeHandler} disabled={timeable}/>
                         </Form.Group>
                     </Col>
@@ -496,13 +496,13 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicmotorRate">
-                            <Form.Label>Motor rating (kV)</Form.Label>
+                            <Form.Label className="inputtext">Motor rating (kV)</Form.Label>
                             <Form.Control type="number" placeholder="Motor rating" name="motorrate" value={motorrate} onChange={this.changeHandler} disabled={motorrateable}/>
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group controlId="formBasicbatteryvolt">
-                            <Form.Label>Battery Voltage (V)</Form.Label>
+                            <Form.Label className="inputtext">Battery Voltage (V)</Form.Label>
                             <Form.Control type="number" placeholder="Battery Voltage" name="batteryvolt" value={batteryvolt} onChange={this.changeHandler} disabled={batteryvoltable}/>
                         </Form.Group>
                     </Col>
@@ -510,13 +510,13 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicpropdiam">
-                            <Form.Label>Diameter of Propeller (inches) </Form.Label>
+                            <Form.Label className="inputtext">Diameter of Propeller (inches) </Form.Label>
                             <Form.Control type="number" placeholder="Diameter of Propeller" name="propdiam" value={propdiam} onChange={this.changeHandler} disabled={propdiamable}/>
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group controlId="formBasicproppitch">
-                            <Form.Label> Pitch of Propeller (inches)</Form.Label>
+                            <Form.Label className="inputtext"> Pitch of Propeller (inches)</Form.Label>
                             <Form.Control type="number" placeholder="Pitch of Propeller" name="proppitch" value={proppitch} onChange={this.changeHandler} disabled={proppitchable}/>
                         </Form.Group>
                     </Col>
@@ -524,13 +524,13 @@ class Input extends Component {
                 <Row>
                     <Col>
                         <Form.Group controlId="formBasicForwardvel">
-                            <Form.Label>Forward Velocity (m/s)</Form.Label>
+                            <Form.Label className="inputtext">Forward Velocity (m/s)</Form.Label>
                             <Form.Control type="number" placeholder="Forward Velocity" name="forwardvel" value={forwardvel} onChange={this.changeHandler} disabled={forwardvelable}/>
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group controlId="formBasicmotorstallcur">
-                            <Form.Label> Motor Stall Current (A)</Form.Label>
+                            <Form.Label className="inputtext"> Motor Stall Current (A)</Form.Label>
                             <Form.Control type="number" placeholder="Motor Stall Current" name="motorstallcur" value={motorstallcur} onChange={this.changeHandler} disabled={motorstallcurable}/>
                         </Form.Group>
                     </Col>

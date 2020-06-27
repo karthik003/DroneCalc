@@ -5,8 +5,8 @@ class About extends Component {
     render() {
         return (
             <div >
-                <p className="text">ABOUT US</p>
-                This website is built by a team of highly dedicated aviation enthusiasts.
+                <p className="text" >ABOUT US</p>
+                <p style={{margin:"0 10px 0 10px"}}>This website is built by a team of highly dedicated aviation enthusiasts.</p>
                 <div className=" "style={{margin:"auto",width:"50%"}}>
                     <Table responsive style={{border:"2px solid #E1E1E1",textAlign:"center"}}>
 
